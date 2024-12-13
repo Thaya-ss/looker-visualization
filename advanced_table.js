@@ -10,26 +10,46 @@ layoutContainer.style.backgroundColor = "#ffffff"; // White background
 layoutContainer.style.color = "#000000"; // Black text
 layoutContainer.style.border = "1px solid #000"; // Border for structure
 
-// Array of the layout sections and their content
-const layoutData = [
-  { key: "Reports-SecondaryDemos", value: "" },
-  { key: "1-Version 1", value: "" },
-  { key: "29/11/2024", value: "" },
-  { key: "Presented To:", value: "1530 Mortgage" },
-  { key: "Presented By:", value: "ab devilliers<br>vinodkumar.n@operative.com" },
-  { key: "Primary Demo:", value: "A18+" },
-  { key: "Flight Dates:", value: "30/12/2024 - 28/9/2025" },
-];
+// Top-left section
+const topLeftContainer = document.createElement("div");
+topLeftContainer.style.gridColumn = "span 2"; // Full width
+topLeftContainer.style.paddingBottom = "20px"; // Add spacing below
+topLeftContainer.innerHTML = `
+  <div style="font-weight: bold; font-size: 16px;">Reports-SecondaryDemos</div>
+  <div>1-Version 1</div>
+  <div>29/11/2024</div>
+`;
 
-// Populate the layout container
-layoutData.forEach((item) => {
-  const cell = document.createElement("div");
-  cell.style.gridColumn = item.value ? "span 1" : "span 2"; // If it has value, keep it in one column
-  cell.style.padding = "5px";
-  cell.style.fontWeight = item.key.includes("Primary Demo") || item.key.includes("Flight Dates") ? "bold" : "normal";
-  cell.innerHTML = `<span style="font-weight: bold;">${item.key}</span> ${item.value}`;
-  layoutContainer.appendChild(cell);
-});
+// Add the top-left content to the container
+layoutContainer.appendChild(topLeftContainer);
+
+// Bottom-left section
+const bottomLeftContainer = document.createElement("div");
+bottomLeftContainer.style.gridColumn = "1 / 2"; // Bottom left
+bottomLeftContainer.style.padding = "5px";
+bottomLeftContainer.innerHTML = `
+  <div style="font-weight: bold;">Presented To:</div>
+  <div>1530 Mortgage</div>
+  <br>
+  <div style="font-weight: bold;">Presented By:</div>
+  <div>ab devilliers<br>vindkumar.n@operative.com</div>
+`;
+
+// Bottom-right section
+const bottomRightContainer = document.createElement("div");
+bottomRightContainer.style.gridColumn = "2 / 3"; // Bottom right
+bottomRightContainer.style.padding = "5px";
+bottomRightContainer.innerHTML = `
+  <div style="font-weight: bold;">Primary Demo:</div>
+  <div>A18+</div>
+  <br>
+  <div style="font-weight: bold;">Flight Dates:</div>
+  <div>30/12/2024 - 28/9/2025</div>
+`;
+
+// Add bottom sections to the container
+layoutContainer.appendChild(bottomLeftContainer);
+layoutContainer.appendChild(bottomRightContainer);
 
 // Append the layout container to the body
 document.getElementById('vis').style.display = "none";
