@@ -35,7 +35,12 @@ const bottomRightContainer = document.createElement("div");
 bottomRightContainer.style.gridColumn = "2 / 3"; // Bottom right
 bottomRightContainer.style.padding = "5px";
 bottomRightContainer.innerHTML = `
-  <div style="font-weight: bold;">Presented To:</div>
+  <div style="display: flex;
+flex-direction: column;
+justify-content: flex-end;
+width: 100%;
+align-items: flex-end;">
+    <div style="font-weight: bold;">Presented To:</div>
   <div>1530 Mortgage</div>
   <br>
   <div style="font-weight: bold;">Presented By:</div>
@@ -46,6 +51,8 @@ bottomRightContainer.innerHTML = `
   <br>
   <div style="font-weight: bold;">Flight Dates:</div>
   <div>30/12/2024 - 28/9/2025</div>
+  </div>
+
 `;
 
 // Add all sections to the layout container
