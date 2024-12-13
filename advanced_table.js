@@ -1,6 +1,7 @@
 // Create a container for the entire layout
 const layoutContainer = document.createElement("div");
 layoutContainer.style.display = "grid";
+layoutContainer.style.width = "100%";
 layoutContainer.style.gridTemplateColumns = "1fr 1fr"; // 2 columns
 layoutContainer.style.gridTemplateRows = "auto auto"; // Rows for content
 layoutContainer.style.gap = "20px"; // Add space between sections
@@ -44,7 +45,8 @@ align-items: flex-end;">
   <div>1530 Mortgage</div>
   <br>
   <div style="font-weight: bold;">Presented By:</div>
-  <div>ab devilliers<br>vinodkumar.n@operative.com</div>
+  <div style="text-align-last: end;">ab devilliers</div>
+  <div>vinodkumar.n@operative.com</div>
   <br>
   <div style="font-weight: bold;">Primary Demo:</div>
   <div>A18+</div>
