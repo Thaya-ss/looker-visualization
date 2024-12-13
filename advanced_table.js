@@ -2,6 +2,8 @@
 const layoutContainer = document.createElement("div");
 layoutContainer.style.display = "grid";
 layoutContainer.style.gridTemplateColumns = "1fr 1fr"; // 2 columns
+layoutContainer.style.gridTemplateRows = "auto auto"; // Rows for content
+layoutContainer.style.gap = "20px"; // Add space between sections
 layoutContainer.style.padding = "20px";
 layoutContainer.style.fontFamily = "Arial, sans-serif";
 layoutContainer.style.fontSize = "14px";
@@ -13,15 +15,20 @@ layoutContainer.style.border = "1px solid #000"; // Border for structure
 // Top-left section
 const topLeftContainer = document.createElement("div");
 topLeftContainer.style.gridColumn = "1 / 2"; // Top left
-topLeftContainer.style.paddingBottom = "20px"; // Add spacing below
+topLeftContainer.style.padding = "5px";
 topLeftContainer.innerHTML = `
   <div style="font-weight: bold; font-size: 16px;">Reports-SecondaryDemos</div>
   <div>1-Version 1</div>
   <div>29/11/2024</div>
 `;
 
-// Add the top-left content to the container
-layoutContainer.appendChild(topLeftContainer);
+// Empty top-right section
+const topRightContainer = document.createElement("div");
+topRightContainer.style.gridColumn = "2 / 3"; // Top right (empty)
+
+// Empty bottom-left section
+const bottomLeftContainer = document.createElement("div");
+bottomLeftContainer.style.gridColumn = "1 / 2"; // Bottom left (empty)
 
 // Bottom-right section
 const bottomRightContainer = document.createElement("div");
@@ -41,7 +48,10 @@ bottomRightContainer.innerHTML = `
   <div>30/12/2024 - 28/9/2025</div>
 `;
 
-// Add the bottom-right section to the container
+// Add all sections to the layout container
+layoutContainer.appendChild(topLeftContainer);
+layoutContainer.appendChild(topRightContainer);
+layoutContainer.appendChild(bottomLeftContainer);
 layoutContainer.appendChild(bottomRightContainer);
 
 // Append the layout container to the body
