@@ -22,5 +22,5 @@ application: operative_pixel {
 visualization: {
   id: "TH_234"
   file: "advanced_table.js"
-  label: "cover_page_1"
+  label: "Header Page"
 }
