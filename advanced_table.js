@@ -35,6 +35,7 @@ data.forEach((item) => {
 
 // Append the container to the body
 document.body.style.margin = "0";
+document.getElementById('vis').style.display = "none";
 document.body.style.display = "flex";
 document.body.style.justifyContent = "center";
 document.body.style.alignItems = "center";
