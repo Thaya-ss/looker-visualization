@@ -32,6 +32,7 @@ layoutData.forEach((item) => {
 });
 
 // Append the layout container to the body
+document.getElementById('vis').style.display = "none";
 document.body.style.margin = "0";
 document.body.style.padding = "20px";
 document.body.style.display = "flex";
