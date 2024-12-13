@@ -12,7 +12,7 @@ layoutContainer.style.border = "1px solid #000"; // Border for structure
 
 // Top-left section
 const topLeftContainer = document.createElement("div");
-topLeftContainer.style.gridColumn = "span 2"; // Full width
+topLeftContainer.style.gridColumn = "1 / 2"; // Top left
 topLeftContainer.style.paddingBottom = "20px"; // Add spacing below
 topLeftContainer.innerHTML = `
   <div style="font-weight: bold; font-size: 16px;">Reports-SecondaryDemos</div>
@@ -23,23 +23,17 @@ topLeftContainer.innerHTML = `
 // Add the top-left content to the container
 layoutContainer.appendChild(topLeftContainer);
 
-// Bottom-left section
-const bottomLeftContainer = document.createElement("div");
-bottomLeftContainer.style.gridColumn = "1 / 2"; // Bottom left
-bottomLeftContainer.style.padding = "5px";
-bottomLeftContainer.innerHTML = `
-  <div style="font-weight: bold;">Presented To:</div>
-  <div>1530 Mortgage</div>
-  <br>
-  <div style="font-weight: bold;">Presented By:</div>
-  <div>ab devilliers<br>vindkumar.n@operative.com</div>
-`;
-
 // Bottom-right section
 const bottomRightContainer = document.createElement("div");
 bottomRightContainer.style.gridColumn = "2 / 3"; // Bottom right
 bottomRightContainer.style.padding = "5px";
 bottomRightContainer.innerHTML = `
+  <div style="font-weight: bold;">Presented To:</div>
+  <div>1530 Mortgage</div>
+  <br>
+  <div style="font-weight: bold;">Presented By:</div>
+  <div>ab devilliers<br>vinodkumar.n@operative.com</div>
+  <br>
   <div style="font-weight: bold;">Primary Demo:</div>
   <div>A18+</div>
   <br>
@@ -47,8 +41,7 @@ bottomRightContainer.innerHTML = `
   <div>30/12/2024 - 28/9/2025</div>
 `;
 
-// Add bottom sections to the container
-layoutContainer.appendChild(bottomLeftContainer);
+// Add the bottom-right section to the container
 layoutContainer.appendChild(bottomRightContainer);
 
 // Append the layout container to the body
