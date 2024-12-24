@@ -22,7 +22,7 @@ const data = [
   { key: "Station:", value: "KOMO6, WBF" },
   { key: "Marketing Coordinator:", value: "ab devilliers" },
   { key: "Start Date:", value: "30/12/2024" },
-  { key: "Primary Demo:", value: "A18+" },
+  { key: "Primary Demo:", value: "A18" },
 ];
 
 // Populate the container with key-value pairs
