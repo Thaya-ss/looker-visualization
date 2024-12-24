@@ -6821,7 +6821,8 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 function App(_ref) {
   var props = _ref.props;
-  return react_default.a.createElement("h1", null, "Hello, ", props.firstCell);
+  console.log('props', props);
+  return react_default.a.createElement("h1", null, "Hello, ", 'We Are Done');
 }
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(7);
