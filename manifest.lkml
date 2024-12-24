@@ -21,6 +21,6 @@ application: operative_pixel {
 
 visualization: {
   id: "TH_234"
-  file: "advanced_table.js"
-  label: "Header Page"
+  file: "viz_build/bundle.js"
+  label: "Thaya Custom Grouping"
 }
