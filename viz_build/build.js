@@ -6820,8 +6820,8 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
  // Create (or import) our react component
 
 function App(_ref) {
-  var props = _ref.props;
-  console.log('props', props);
+  var data = _ref.data;
+  console.log('props', data);
   return react_default.a.createElement("h1", null, "Hello, ", 'We Are Done');
 }
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
