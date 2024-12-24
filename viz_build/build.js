@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/  // Load entry module and return exports
-/******/  return __webpack_require__(__webpack_require__.s = 52);
+/******/  return __webpack_require__(__webpack_require__.s = 51);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -634,7 +634,7 @@ module.exports = Z.default || Z;
 */
 
 
-var aa = __webpack_require__(6),
+var aa = __webpack_require__(4),
     n = __webpack_require__(10),
     ba = __webpack_require__(14);
 
@@ -6806,29 +6806,48 @@ exports.unstable_getFirstCallbackNode = function () {
 
 /***/ }),
 
-/***/ 52:
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (true) {
+  module.exports = __webpack_require__(12);
+} else {}
+
+/***/ }),
+
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(6);
+var react = __webpack_require__(4);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
-// CONCATENATED MODULE: ./src/examples/hello_world_react/app.jsx
- // Create (or import) our react component
+// CONCATENATED MODULE: ./src/examples/hello_world_react/show.jsx
 
-function App(_ref) {
-  var data = _ref.data;
-  console.log('props', data);
-  return react_default.a.createElement("h1", null, "Hello, ", 'We Are Done');
+function ShowUp(_ref) {
+  var data = _ref.data,
+      queryResponse = _ref.queryResponse,
+      config = _ref.config;
+  return react["React"].createElement(react["React"].Fragment, null, react["React"].createElement("p", null, JSON.stringify(data)), react["React"].createElement("p", null, JSON.stringify(queryResponse)), react["React"].createElement("p", null, JSON.stringify(config)));
 }
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(7);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
+// CONCATENATED MODULE: ./src/examples/hello_world_react/loading.jsx
+
+function Loader() {
+  return react["React"].createElement("div", null, "Loading...");
+}
 // CONCATENATED MODULE: ./src/examples/hello_world_react/hello_world_react.js
+
+
 
 
 
@@ -6861,9 +6880,7 @@ looker.plugins.visualizations.add({
 
     this._textElement = container.appendChild(document.createElement("div")); // Render to the target element
 
-    this.chart = react_dom_default.a.render(react_default.a.createElement(Hello, {
-      data: "loading..."
-    }), this._textElement);
+    this.chart = react_dom_default.a.render(react_default.a.createElement(Loader, null), this._textElement);
   },
   // Render in response to the data or settings changing
   updateAsync: function updateAsync(data, element, config, queryResponse, details, done) {
@@ -6883,31 +6900,18 @@ looker.plugins.visualizations.add({
       this._textElement.className = "hello-world-text-small";
     } else {
       this._textElement.className = "hello-world-text-large";
-    } // Grab the first cell of the data
+    } // Finally update the state with our new data
 
 
-    var firstRow = data[0];
-    var firstCell = 'We Are Done!'; // Finally update the state with our new data
-
-    this.chart = react_dom_default.a.render(react_default.a.createElement(App, {
-      data: firstCell
+    this.chart = react_dom_default.a.render(react_default.a.createElement(ShowUp, {
+      data: data,
+      queryResponse: queryResponse,
+      config: config
     }), this._textElement); // We are done rendering! Let Looker know.
 
     done();
   }
 });
-
-/***/ }),
-
-/***/ 6:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (true) {
-  module.exports = __webpack_require__(12);
-} else {}
 
 /***/ }),
 
